@@ -1,0 +1,20 @@
+
+{% block title %}{{title}}
+<div class="container">
+    <h1>FRIENDS</h1>
+    <br>
+    <form action="/friends" METHOD="POST">
+        <input type="text" placeholder="Name" name="name">
+        <input type="submit", value="Add Name" class="btn btn-secondary">
+
+    </form>
+    <br><br><br>
+
+    {% for friend in friends %}
+    <h4>
+        {{ friend.name }}
+    </h4>
+    {% endfor %}
+</div>
+
+{% endblock %}
